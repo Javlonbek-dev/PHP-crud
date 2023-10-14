@@ -1,6 +1,6 @@
 <?php
 include "db_conn.php";
-$id=$_GET['id'];
+$id = $_GET['id'];
 
 
 if (isset($_POST["submit"])) {
@@ -8,7 +8,7 @@ if (isset($_POST["submit"])) {
     $email = $_POST['email'];
     $gender = $_POST['gender'];
 
-    $sql ="UPDATE `persons` SET `first_name`='$first_name',`email`='$email',`gender`='$gender' WHERE id=$id";
+    $sql = "UPDATE `persons` SET `first_name`='$first_name',`email`='$email',`gender`='$gender' WHERE id=$id";
 
     $result = $con->query($sql);
 
@@ -45,9 +45,9 @@ if (isset($_POST["submit"])) {
             <p class="text-muted">Click update after changing any information </p>
         </div>
         <?php
-        $sql="SELECT * FROM persons WHERE id=$id LIMIT 1";
-        $result =$con->query($sql);
-        $row= mysqli_fetch_assoc($result);
+        $sql = "SELECT * FROM persons WHERE id=$id LIMIT 1";
+        $result = $con->query($sql);
+        $row = mysqli_fetch_assoc($result);
 
 
         ?>
@@ -56,25 +56,21 @@ if (isset($_POST["submit"])) {
                 <div class="row">
                     <div class="col">
                         <label class="form-label">First Name</label>
-                        <input type="text" class="form-control" name="first_name"
-                        value="<?php echo $row['first_name'] ?>">
+                        <input type="text" class="form-control" name="first_name" value="<?php echo $row['first_name'] ?>">
                     </div>
                 </div>
 
                 <div class="col">
                     <label class="form-label">Email</label>
-                    <input type="email" class="form-control" name="email" 
-                    value="<?php echo $row['email'] ?>">
+                    <input type="email" class="form-control" name="email" value="<?php echo $row['email'] ?>">
                 </div>
 
                 <div class="form-group mb-3">
                     <label>Gender:</label> &nbsp;
-                    <input type="radio" class="form-checked-input" name="gender" id="male" value="male"
-                    <?php echo ($row['gender']=='male')? "checked":"";?>>
+                    <input type="radio" class="form-checked-input" name="gender" id="male" value="male" <?php echo ($row['gender'] == 'male') ? "checked" : ""; ?>>
                     <label for="male" class="form-input-label">Male</label>
                     &nbsp;
-                    <input type="radio" class="form-checked-input" name="gender" id="famale"
-                     value="famale" <?php echo ($row['gender']=='female')? "checked":"";?>>
+                    <input type="radio" class="form-checked-input" name="gender" id="famale" value="famale" <?php echo ($row['gender'] == 'female') ? "checked" : ""; ?>>
                     <label for="famale" class="form-input-label">Famale</label>
                 </div>
 

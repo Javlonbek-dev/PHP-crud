@@ -16,16 +16,16 @@
     </nav>
 
     <div class="container">
-    <?php
-    if(isset($_GET['msg'])){
-        $msg=$_GET['msg'];
-        echo '
+        <?php
+        if (isset($_GET['msg'])) {
+            $msg = $_GET['msg'];
+            echo '
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
-            '.$msg.'
+            ' . $msg . '
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>';
-    }
-    ?>
+        }
+        ?>
         <a href="add_new.php" class="btn btn-dark mb-3">Add New</a>
 
         <table class="table table-hover text-center">
