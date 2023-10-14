@@ -2,20 +2,20 @@
 include "db_conn.php";
 
 if (isset($_POST["submit"])) {
-   $first_name = $_POST['first_name'];
-   $email = $_POST['email'];
-   $gender = $_POST['gender'];
+    $first_name = $_POST['first_name'];
+    $email = $_POST['email'];
+    $gender = $_POST['gender'];
 
-   $sql = "INSERT INTO `crud_1`(`id`, `first_name`, `email`, `gender`)
+    $sql = "INSERT INTO `persons`(`id`, `first_name`, `email`, `gender`)
     VALUES (NULL,'$first_name','$email','$gender')";
 
-   $result = mysqli_query($conn, $sql);
+    $result = $con->query($sql);
 
-   if ($result) {
-      header("Location: index.php?msg=New record created successfully");
-   } else {
-      echo "Failed: " . mysqli_error($conn);
-   }
+    if ($result) {
+        header("Location: index.php?msg=New record created successfully");
+    } else {
+        echo "Failed: " . mysqli_error($conn);
+    }
 }
 ?>
 
