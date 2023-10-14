@@ -52,9 +52,9 @@
                         <td><?php echo $row["email"] ?></td>
                         <td><?php echo $row["gender"] ?></td>
                         <td>
-                            <a href="edit.php>id=<?php echo $row['id'] ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3">
+                            <a href="edit.php?id=<?php echo $row['id'] ?>" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3">
                                 </i></a>
-                            <a href="delete.php>id=<?php echo $row['id'] ?>" class="link-dark"><i class="fa-solid fa-trash fs-5">
+                            <a href="delete.php?id=<?php echo $row['id'] ?>" class="link-dark"><i class="fa-solid fa-trash fs-5">
                                 </i></a>
                         </td>
                     </tr>
