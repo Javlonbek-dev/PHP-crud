@@ -59,7 +59,6 @@
                         </td>
                     </tr>
 
-
                 <?php
                 }
 
@@ -68,5 +67,4 @@
         </table>
     </div>
 </body>
-
 </html>
