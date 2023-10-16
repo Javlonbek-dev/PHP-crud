@@ -1,13 +1,11 @@
 <?php
-$servername= "localhost";
-$username="root";
-$password="";
-$dbname="crud_1";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "crud_1";
 
+$con = new mysqli($servername, $username, $password, $dbname);
 
-$con =new mysqli($servername,$username,$password,$dbname);
-
-if(!$con){
+if (!$con) {
     die("Connection failed" . mysqli_connect_error());
 }
-// echo "Connect succesfully";

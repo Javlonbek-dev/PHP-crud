@@ -2,7 +2,6 @@
 include "db_conn.php";
 $id = $_GET['id'];
 
-
 if (isset($_POST["submit"])) {
     $first_name = $_POST['first_name'];
     $email = $_POST['email'];
